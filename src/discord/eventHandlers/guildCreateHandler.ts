@@ -113,22 +113,25 @@ export async function guildCreateHandler({
         await BotChannel.send(
             `${
                 sendDeltePrevChannelMessage
-                    ? `Hey, glad to have you back!
+                    ? `Glad to have you back!\n
 Please delete the old #${botCommunicationChannelName} channel to avoid confusion for users communicating with the bot.
 The old won't work anymore.\n\n`
                     : ''
             }
-Hey 👋, This is the channel to communicate with the bot communications bot.
+Hey 👋, This is the channel to communicate with the Philotes matching bot.
 You will be able to send commands here to control the matching process.
-You can see a list of all supported commands with the command: /help.\n\n
-Quick Start:\n
-1. Set role(s) that you would like matched with the command: /setRoles <Role1>, <Role2>, <Role3>,...
+You can see a list of all supported commands with the command: \`/help\`
+
+*Only users in this channel will be able to control the matching process.*
+To give a user control over the matching process, add them to this channel.\n\n
+**__Quick Start:__**\n
+1. Set role(s) that you would like matched with the command: \`/setRoles <Role1>, <Role2>, <Role3>,...\`
+For example: \`/setRoles outliers\`
 All users with this role(s) will be matched in the next round.\n
-2. Begin the first round of matches immediately with the command: /matchOnce.\n
+2. Begin the first round of matches immediately with the command: \`/matchOnce\`\n
     
-*Note: if anything goes wrong, you can delte all matched channels with the command: /deleteChannels.
-    
----⚡🦎---
+*Note: if anything goes wrong, you can delete all matched channels with the command \`/deleteChannels\`.\n\n
+---⚡🦎---   
                 `
         )
     }
